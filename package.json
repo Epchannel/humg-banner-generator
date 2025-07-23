@@ -1,0 +1,60 @@
+{
+  "name": "humg-banner-generator",
+  "version": "1.0.0",
+  "description": "🎓 Tạo banner chào mừng sinh viên HUMG với avatar, tên và thời gian. Hỗ trợ CLI và API.",
+  "main": "banner-generator.js",
+  "bin": {
+    "humg-banner": "./cli.js"
+  },
+  "scripts": {
+    "start": "node create-banner.js",
+    "create": "node create-banner.js",
+    "cli": "node cli.js",
+    "test": "node cli.js --help"
+  },
+  "files": [
+    "banner-generator.js",
+    "position-config.js", 
+    "cli.js",
+    "create-banner.js",
+    "fonts/",
+    "CHATBOT HUMG.jpg",
+    "README.md"
+  ],
+  "keywords": [
+    "banner",
+    "generator", 
+    "humg",
+    "avatar",
+    "canvas",
+    "image",
+    "cli",
+    "student",
+    "welcome",
+    "vietnam",
+    "university"
+  ],
+  "author": {
+    "name": "HUMG",
+    "email": "your-email@example.com",
+    "url": "https://github.com/your-username"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/humg-banner-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/humg-banner-generator/issues"
+  },
+  "homepage": "https://github.com/your-username/humg-banner-generator#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "canvas": "^3.1.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {},
+  "preferGlobal": true
+}

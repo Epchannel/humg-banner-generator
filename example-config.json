@@ -1,0 +1,12 @@
+{
+  "userName": "NGUYỄN THỊ HƯƠNG",
+  "avatarUrl": "https://i.pravatar.cc/300?img=5",
+  "outputPath": "my-awesome-banner.jpg",
+  "datetimeFormat": {
+    "showDate": true,
+    "showTime": true,
+    "dateFormat": "dd/mm/yyyy",
+    "timeFormat": "24h",
+    "separator": " | "
+  }
+} 
