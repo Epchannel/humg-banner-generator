@@ -98,7 +98,7 @@ class BannerGenerator {
 
     // Load background image
     try {
-      this.backgroundImage = await loadImage('./CHATBOT HUMG.jpg');
+      this.backgroundImage = await loadImage('./background.jpg');
       this.canvas = createCanvas(this.backgroundImage.width, this.backgroundImage.height);
       this.ctx = this.canvas.getContext('2d');
       console.log(`Canvas initialized: ${this.backgroundImage.width}x${this.backgroundImage.height}`);
@@ -144,7 +144,7 @@ class BannerGenerator {
       fontWeight = 'bold',
       strokeColor = '#000000',
       strokeWidth = 3,
-      shadow = true
+      shadow = false
     } = options;
 
     this.ctx.save();
@@ -231,7 +231,7 @@ class BannerGenerator {
     const textY = this.canvas.height * CONFIG.text.main.y;
     
     // Kết hợp "CHÀO MỪNG" với tên người dùng trong cùng một dòng
-    const fullText = 'CHÀO MỪNG, ' + userName;
+    const fullText = 'Chào mừng, ' + userName;
     
     this.drawText(fullText, textX, textY, {
       fontSize: Math.max(CONFIG.style.mainText.minFontSize, this.canvas.width * CONFIG.style.mainText.fontSize),
@@ -240,6 +240,39 @@ class BannerGenerator {
       strokeColor: CONFIG.style.mainText.strokeColor,
       strokeWidth: CONFIG.style.mainText.strokeWidth,
       fontWeight: CONFIG.style.mainText.fontWeight,
+      textAlign: 'center'
+    });
+
+    // Add status text (ĐÃ THAM GIA/ĐÃ RỜI KHỎI) using CONFIG
+    const statusX = this.canvas.width * CONFIG.text.status.x;
+    const statusY = this.canvas.height * CONFIG.text.status.y;
+    
+    // Lấy status từ options, mặc định là "ĐÃ THAM GIA"
+    const statusText = options.status || 'ĐÃ THAM GIA';
+    
+    this.drawText(statusText, statusX, statusY, {
+      fontSize: Math.max(CONFIG.style.statusText.minFontSize, this.canvas.width * CONFIG.style.statusText.fontSize),
+      fontFamily: CONFIG.style.statusText.fontFamily,
+      color: CONFIG.style.statusText.color,
+      strokeColor: CONFIG.style.statusText.strokeColor,
+      strokeWidth: CONFIG.style.statusText.strokeWidth,
+      fontWeight: CONFIG.style.statusText.fontWeight,
+      textAlign: 'center'
+    });
+
+    // Add community text using CONFIG
+    const communityX = this.canvas.width * CONFIG.text.community.x;
+    const communityY = this.canvas.height * CONFIG.text.community.y;
+    
+    const communityText = 'CỘNG ĐỒNG TÂN SINH VIÊN K70 HUMG';
+    
+    this.drawText(communityText, communityX, communityY, {
+      fontSize: Math.max(CONFIG.style.communityText.minFontSize, this.canvas.width * CONFIG.style.communityText.fontSize),
+      fontFamily: CONFIG.style.communityText.fontFamily,
+      color: CONFIG.style.communityText.color,
+      strokeColor: CONFIG.style.communityText.strokeColor,
+      strokeWidth: CONFIG.style.communityText.strokeWidth,
+      fontWeight: CONFIG.style.communityText.fontWeight,
       textAlign: 'center'
     });
 

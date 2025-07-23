@@ -23,6 +23,7 @@ function showHelp() {
 📝 Ví dụ config file (config.json):
 {
   "userName": "NGUYỄN VĂN A",
+  "status": "ĐÃ THAM GIA",
   "avatarUrl": "https://example.com/avatar.jpg",
   "outputPath": "my-banner.jpg",
   "datetimeFormat": {
@@ -34,7 +35,7 @@ function showHelp() {
   }
 }
 
-🔗 Thêm thông tin: https://github.com/your-username/humg-banner-generator
+🔗 Thêm thông tin: https://github.com/Epchannel/humg-banner-generator
   `);
 }
 
@@ -54,6 +55,7 @@ async function interactiveMode() {
     console.log('📝 Nhập thông tin để tạo banner:\n');
     
     const userName = await question('👤 Tên người dùng: ');
+    const status = await question('📋 Trạng thái (1: ĐÃ THAM GIA, 2: ĐÃ RỜI KHỎI, mặc định: 1): ');
     const avatarUrl = await question('🖼️  URL avatar (để trống nếu không có): ');
     const outputPath = await question('💾 Tên file output (mặc định: banner.jpg): ') || 'banner.jpg';
     
@@ -62,8 +64,15 @@ async function interactiveMode() {
     const generator = new BannerGenerator();
     await generator.initialize();
     
+    // Xử lý status input
+    let statusText = 'ĐÃ THAM GIA';
+    if (status === '2') {
+      statusText = 'ĐÃ RỜI KHỎI';
+    }
+    
     const config = {
       userName: userName || 'Tân Sinh Viên',
+      status: statusText,
       outputPath,
       datetimeFormat: {
         showDate: true,

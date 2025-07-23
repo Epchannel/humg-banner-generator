@@ -1,7 +1,7 @@
 {
   "name": "humg-banner-generator",
-  "version": "1.0.0",
-  "description": "🎓 Tạo banner chào mừng sinh viên HUMG với avatar, tên và thời gian. Hỗ trợ CLI và API.",
+  "version": "1.1.0",
+  "description": "🎓 Tạo banner chào mừng sinh viên HUMG với avatar, tên, trạng thái và thời gian. Hỗ trợ CLI và API.",
   "main": "banner-generator.js",
   "bin": {
     "humg-banner": "./cli.js"
@@ -19,7 +19,8 @@
     "create-banner.js",
     "fonts/",
     "CHATBOT HUMG.jpg",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "keywords": [
     "banner",
@@ -32,22 +33,23 @@
     "student",
     "welcome",
     "vietnam",
-    "university"
+    "university",
+    "status"
   ],
   "author": {
-    "name": "HUMG",
-    "email": "your-email@example.com",
-    "url": "https://github.com/your-username"
+    "name": "Pham Hong Hiep",
+    "email": "epchannel1208@gmail.com",
+    "url": "https://github.com/Epchannel"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/humg-banner-generator.git"
+    "url": "https://github.com/Epchannel/humg-banner-generator.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/humg-banner-generator/issues"
+    "url": "https://github.com/Epchannel/humg-banner-generator/issues"
   },
-  "homepage": "https://github.com/your-username/humg-banner-generator#readme",
+  "homepage": "https://github.com/Epchannel/humg-banner-generator#readme",
   "engines": {
     "node": ">=14.0.0"
   },

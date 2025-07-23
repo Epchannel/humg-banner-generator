@@ -3,6 +3,7 @@ const BannerGenerator = require('./banner-generator');
 // 🎯 TÙNG CHỈNH THÔNG TIN CỦA BẠN TẠI ĐÂY
 const USER_CONFIG = {
   userName: 'NGUYỄN VĂN A',                    // ✏️ Thay đổi tên của bạn
+  status: 'ĐÃ THAM GIA',                      // 📋 Trạng thái: 'ĐÃ THAM GIA' hoặc 'ĐÃ RỜI KHỎI'
   avatarUrl: 'https://s120-ava-talk.zadn.vn/c/9/1/c/14/120/0877abda951212d0c3238b9a0cc0f53a.jpg',                             // 🔗 URL avatar (nếu có)
   avatarFile: null,                            // 📁 File avatar local (nếu có)
   outputPath: 'my-banner.jpg',                 // 💾 Tên file output
@@ -68,6 +69,7 @@ console.log('💡 Mẹo:');
 console.log('- Để dùng avatar từ URL: avatarUrl: "https://..."');
 console.log('- Để dùng avatar local: avatarFile: "./avatar.jpg"');
 console.log('- Để không dùng avatar: để null cho cả hai');
+console.log('- Trạng thái: status: "ĐÃ THAM GIA" hoặc "ĐÃ RỜI KHỎI"');
 console.log('');
 console.log('🔤 Font tùy chỉnh:');
 console.log('- Tạo thư mục fonts/ và đặt file .ttf vào đó');
@@ -80,6 +82,11 @@ console.log('- Tự động hiển thị ngày giờ hiện tại');
 console.log('- Sửa datetimeFormat để thay đổi định dạng');
 console.log('- Sửa vị trí trong position-config.js (text.datetime.x, text.datetime.y)');
 console.log('- Sửa style trong position-config.js (style.datetimeText)');
+console.log('');
+console.log('📋 Tùy chỉnh văn bản:');
+console.log('- Sửa status trong USER_CONFIG');
+console.log('- Sửa vị trí trong position-config.js (text.status, text.community)');
+console.log('- Sửa style trong position-config.js (style.statusText, style.communityText)');
 console.log('');
 
 // Chạy nếu được gọi trực tiếp

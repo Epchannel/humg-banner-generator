@@ -131,7 +131,7 @@ Thay đổi URLs trong README.md:
 ## 🎯 Gợi ý tên package
 
 Nếu `humg-banner-generator` đã tồn tại:
-- `@your-username/humg-banner-generator`
+- `@Epchannel/humg-banner-generator`
 - `humg-student-banner`
 - `university-banner-maker`
 - `banner-generator-humg`

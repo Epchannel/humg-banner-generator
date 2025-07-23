@@ -14,6 +14,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Documentation files (không cần trong NPM package)
+PUBLISH.md
+RELEASE.md
+
 # Node
 node_modules/
 coverage/
